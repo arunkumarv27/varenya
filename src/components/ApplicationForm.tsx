@@ -17,13 +17,40 @@ interface ApplicationFormProps {
 export default function ApplicationForm({ job, onSubmit }: ApplicationFormProps) {
   const [email, setEmail] = useState("")
   const [resume, setResume] = useState<File | null>(null)
+  const [coverLetter, setCoverLetter] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
-    console.log("Submitting application", { job, email, resume })
-    onSubmit()
+  
+    if (!email || !resume) {
+      alert("Please fill all required fields.")
+      return
+    }
+  
+    const formData = new FormData()
+    formData.append("email", email)
+    formData.append("coverLetter", coverLetter)
+    formData.append("jobTitle", job.title)
+    formData.append("resume", resume)
+  
+    try {
+      const res = await fetch("/applyJob", {
+        method: "POST",
+        body: formData,
+      })
+  
+      if (res.ok) {
+        alert("Application sent successfully!")
+        onSubmit()
+      } else {
+        alert("Failed to send application.")
+      }
+    } catch (error) {
+      console.error("Error submitting application:", error)
+      alert("An error occurred while sending your application.")
+    }
   }
+  
 
   return (
     <motion.div
@@ -82,7 +109,13 @@ export default function ApplicationForm({ job, onSubmit }: ApplicationFormProps)
           <Label htmlFor="coverLetter" className="text-white">
             Cover Letter (Optional)
           </Label>
-          <Textarea id="coverLetter" rows={4} className="bg-gray-700/50 text-white placeholder-gray-400" />
+          <Textarea
+  id="coverLetter"
+  rows={4}
+  value={coverLetter}
+  onChange={(e) => setCoverLetter(e.target.value)}
+  className="bg-gray-700/50 text-white placeholder-gray-400"
+/>
         </motion.div>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
