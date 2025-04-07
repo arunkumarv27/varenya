@@ -28,11 +28,11 @@ export default function Home() {
 
   return (
     <div>
-      
-      <Head>
-        <link rel="icon" href="/VarenyaHorizontalpng.png" />
-        <title>Varenya - Home</title> 
-      </Head>
+<Head>
+  <link rel="icon" href="/VarenyaHorizontalpng.png" />
+  <title>Varenya - Home</title>
+</Head>
+
 
       <Analytics />
       <NavigationBar />
