@@ -25,7 +25,39 @@ import {
 
 function Footerdemo() {
     const [isDarkMode, setIsDarkMode] = React.useState(false);
-
+    const [newsletterEmail, setNewsletterEmail] = React.useState("");
+    const [newsletterStatus, setNewsletterStatus] = React.useState<"idle" | "success" | "error">("idle");
+    
+    const handleNewsletterSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+    
+        try {
+            const res = await fetch("/sendEmail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    firstName: "Newsletter", // placeholder
+                    lastName: "Signup",
+                    email: newsletterEmail,
+                    message: "Subscribed to the newsletter via footer form.",
+                }),
+            });
+    
+            const data = await res.json();
+            if (res.ok && data.success) {
+                setNewsletterStatus("success");
+                setNewsletterEmail("");
+            } else {
+                setNewsletterStatus("error");
+            }
+        } catch (error) {
+            console.error("Newsletter submit error:", error);
+            setNewsletterStatus("error");
+        }
+    };
+    
     React.useEffect(() => {
         if (isDarkMode) {
             document.documentElement.classList.add("dark");
@@ -47,21 +79,32 @@ function Footerdemo() {
                             Subscribe to our newsletter for insights on AI, cloud computing,
                             cybersecurity, and IT strategy.
                         </p>
-                        <form className="relative">
-                            <Input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="pr-12 backdrop-blur-sm"
-                            />
-                            <Button
-                                type="submit"
-                                size="icon"
-                                className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
-                            >
-                                <Send className="h-4 w-4" />
-                                <span className="sr-only">Subscribe</span>
-                            </Button>
-                        </form>
+                        <form onSubmit={handleNewsletterSubmit} className="relative">
+    <Input
+        type="email"
+        placeholder="Enter your email"
+        value={newsletterEmail}
+        onChange={(e) => setNewsletterEmail(e.target.value)}
+        required
+        className="pr-12 backdrop-blur-sm"
+    />
+    <Button
+        type="submit"
+        size="icon"
+        className="absolute right-1 top-1 h-8 w-8 rounded-full bg-primary text-primary-foreground transition-transform hover:scale-105"
+    >
+        <Send className="h-4 w-4" />
+        <span className="sr-only">Subscribe</span>
+    </Button>
+</form>
+{newsletterStatus === "success" && (
+    <p className="text-green-500 mt-2 text-sm">Subscribed successfully!</p>
+)}
+{newsletterStatus === "error" && (
+    <p className="text-red-500 mt-2 text-sm">Subscription failed. Try again.</p>
+)}
+
+
                     </div>
 
                     
