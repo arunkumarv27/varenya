@@ -2,8 +2,9 @@ import React from 'react';
 import { FaPhone, FaClock } from 'react-icons/fa';
 
 const TopHeader = () => {
+  console.log('loaded')
   return (
-<div style={{ backgroundColor: '#f9973b' }} className="text-white text-sm">
+<div style={{ backgroundColor: '#0285D3' }} className="text-white text-sm">
 
       <div className="container mx-auto px-4 py-2">
         <div className="flex flex-col lg:flex-row justify-between items-center">

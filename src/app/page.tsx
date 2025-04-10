@@ -42,7 +42,7 @@ export default function Home() {
 </Head>
 
 
-      <Analytics />
+      {/* <Analytics /> */}
       <div className="hidden md:block">
       <TopHeader/>
       </div>

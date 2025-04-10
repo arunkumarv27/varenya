@@ -63,7 +63,7 @@ export default function NavigationBar() {
   className="mega-menu-link font-bold text-[17px] text-[#0E1C3D] hover:text-[#007bff] transition-colors duration-200"
   href="/"
 >
-  Home
+  Homesdkfjnsdkfjn
 </a>          </li>
 
           <li className="mega-menu-item mega-menu-item-has-children">
