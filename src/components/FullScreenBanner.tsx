@@ -4,11 +4,17 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/navigation";
 
 export default function FullScreenBanner() {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
     const [isVisible, setIsVisible] = useState(false);
+    const router = useRouter();
 
+    const handleContactClick = () => {
+      router.push("/contactus");
+    };
+    
     useEffect(() => {
         if (inView) {
             setIsVisible(true);
@@ -79,13 +85,15 @@ export default function FullScreenBanner() {
             </div>
 
             <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={!isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1.2 }}
-                className="mt-6 px-6 py-3 bg-orange-500 text-black text-lg font-bold rounded-lg shadow-lg hover:bg-orange-600"
-            >
-                Contact Us
-            </motion.button>
+  initial={{ opacity: 0, y: 20 }}
+  animate={!isVisible ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 1.2 }}
+  className="mt-6 px-6 py-3 bg-orange-500 text-black text-lg font-bold rounded-lg shadow-lg hover:bg-orange-600"
+  onClick={handleContactClick}
+>
+  Contact Us
+</motion.button>
+
         </div>
     );
 }
