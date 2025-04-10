@@ -77,10 +77,16 @@
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
+  line-height: 1.2; /* ensures consistent text height */
+  height: 48px; /* <-- Ensures same total height across all headings */
+  display: flex;
+  align-items: flex-end; /* aligns text to the bottom */
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #ccc;
 }
+
+
 
 .mega-sub-menu ul {
   list-style: none;

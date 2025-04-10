@@ -102,7 +102,20 @@ export default function NavContent({ slug }: { slug: any }) {
         "migration-planning-and-strategy": {
             mainContent: "Moving to the cloud requires careful planning and execution to ensure a smooth transition without disruption to your business operations. Varenya's Migration Planning and Strategy service provides organizations with a comprehensive approach to migrating their infrastructure, applications, and data to the cloud. Our strategic framework is designed to minimize risks, reduce downtime, and optimize your migration process, ensuring your business fully capitalizes on the cloud's potential.",
             solutions: "At Varenya, we deliver custom-tailored migration solutions that ensure a successful shift to cloud-based systems. Our Migration Planning and Strategy includes:\n\nComprehensive Migration Assessment: We start by thoroughly assessing your existing IT landscape, applications, and workloads to understand their cloud compatibility and identify key areas for improvement.\n\nCustomized Migration Roadmap: Our experts create a step-by-step migration strategy based on your business needs, outlining clear timelines, resources, and the best cloud deployment models.\n\nRisk Mitigation: We identify and address potential risks involved in migration, from data loss to security vulnerabilities, ensuring that your transition is seamless and safe.\n\nData Migration Strategy: Whether it's a lift-and-shift, refactor, or re-platforming, we develop a data migration plan tailored to your business requirements, ensuring minimal disruption and maximum data integrity.\n\nPost-Migration Support: Our service doesn't stop after the migration. We offer continued support to fine-tune the environment, address performance issues, and provide additional optimization as needed.\n\nWith our strategic approach, businesses can move to the cloud with confidence, knowing that their migration is backed by proven processes and expert guidance."
-        }
+        },
+        "openai": {
+    mainContent: "OpenAI is revolutionizing the way we interact with technology. Varenya is exploring strategic implementations of OpenAI’s advanced models to empower organizations with smarter automation, better decision-making, and intelligent customer experiences.",
+    solutions: "Our OpenAI-powered solutions focus on natural language understanding and generation. This includes AI-driven chatbots for real-time customer support, intelligent content summarization for knowledge bases, and advanced sentiment analysis tools that extract insights from user feedback and social media.\n\nWe are currently working on enterprise integrations with GPT models to automate workflows, streamline document analysis, and provide conversational AI interfaces for internal tools."
+},
+"dall-e": {
+    mainContent: "DALL·E enables the generation of original, high-quality images from text prompts, opening up new possibilities for creativity and automation. At Varenya, we are piloting the use of DALL·E to bring generative AI into our design, marketing, and training workflows.",
+    solutions: "We use DALL·E to support creative teams by generating visual assets for branding, presentations, and product design. It also assists in visual storytelling for internal communications, enabling rapid mockup creation for concept visualization. Future phases will explore personalized image generation based on customer profiles and content themes."
+},
+"devops": {
+    mainContent: "Varenya’s DevOps initiatives focus on unifying development and operations to increase agility, automate deployments, and accelerate software delivery lifecycles. By integrating modern DevOps practices, we empower engineering teams to build, test, and release software faster and with greater confidence.",
+    solutions: "Our DevOps offerings include setting up robust CI/CD pipelines, infrastructure automation using Terraform and Ansible, and implementing monitoring tools like Prometheus and Grafana. We also help teams adopt container orchestration with Kubernetes, enabling scalable and resilient application deployments across hybrid environments.\n\nWe're currently building reusable DevOps frameworks tailored for enterprise environments to reduce time-to-market and improve system reliability."
+}
+
     };
 
 

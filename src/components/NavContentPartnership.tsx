@@ -38,7 +38,35 @@ export default function NavContentPartnership({ slug }: { slug: string }) {
         },
         "jenkins": {
             solutions: "Through our partnership with Jenkins, we enable continuous integration and continuous delivery (CI/CD) for our clients. Varenya utilizes Jenkins' automation capabilities to streamline software development processes, enhance deployment efficiency, and improve product quality."
+        },
+        "openai": {
+            mainContent: "OpenAI is revolutionizing the way we interact with technology. Varenya is exploring strategic implementations of OpenAI’s advanced models to empower organizations with smarter automation, better decision-making, and intelligent customer experiences.",
+            solutions: "Our OpenAI-powered solutions focus on natural language understanding and generation. This includes AI-driven chatbots for real-time customer support, intelligent content summarization for knowledge bases, and advanced sentiment analysis tools that extract insights from user feedback and social media.\n\nWe are currently working on enterprise integrations with GPT models to automate workflows, streamline document analysis, and provide conversational AI interfaces for internal tools."
+        },
+        "dall-e": {
+            mainContent: "DALL·E enables the generation of original, high-quality images from text prompts, opening up new possibilities for creativity and automation. At Varenya, we are piloting the use of DALL·E to bring generative AI into our design, marketing, and training workflows.",
+            solutions: "We use DALL·E to support creative teams by generating visual assets for branding, presentations, and product design. It also assists in visual storytelling for internal communications, enabling rapid mockup creation for concept visualization. Future phases will explore personalized image generation based on customer profiles and content themes."
+        },
+        "devops": {
+            mainContent: "Varenya’s DevOps initiatives focus on unifying development and operations to increase agility, automate deployments, and accelerate software delivery lifecycles. By integrating modern DevOps practices, we empower engineering teams to build, test, and release software faster and with greater confidence.",
+            solutions: "Our DevOps offerings include setting up robust CI/CD pipelines, infrastructure automation using Terraform and Ansible, and implementing monitoring tools like Prometheus and Grafana. We also help teams adopt container orchestration with Kubernetes, enabling scalable and resilient application deployments across hybrid environments.\n\nWe're currently building reusable DevOps frameworks tailored for enterprise environments to reduce time-to-market and improve system reliability."
         }
+        ,
+        "databricks": {
+    mainContent: "Varenya partners with Databricks to help businesses harness the full power of unified analytics and AI. Our integration strategy leverages Databricks' Lakehouse Platform to streamline data engineering, advanced analytics, and machine learning operations on a single, scalable platform.",
+    solutions: "Our Databricks solutions include:\n\n• Unified Data Architecture: Break down silos by combining data lakes and data warehouses into a single lakehouse architecture.\n• Scalable Machine Learning: Accelerate model development with collaborative notebooks and managed ML workflows.\n• Real-Time Analytics: Process streaming data in real-time for actionable business insights.\n• Data Governance & Security: Implement robust access controls, auditing, and compliance frameworks across your data pipeline.\n\nVarenya helps organizations unlock insights faster while keeping data secure and production-ready for AI innovation."
+},
+
+"huggingface": {
+    mainContent: "As the future of AI shifts toward open models and ethical development, Varenya’s partnership with Hugging Face positions us at the forefront of responsible AI innovation. By integrating open-source transformer models and NLP frameworks, we enable scalable, customizable AI capabilities for our clients.",
+    solutions: "Our Hugging Face partnership empowers your business with:\n\n• Pre-trained Transformers: Fast-track development with ready-to-use NLP models for text classification, summarization, translation, and more.\n• Model Fine-Tuning: Customize state-of-the-art models like BERT, RoBERTa, and GPT for your industry-specific use cases.\n• Inference APIs: Deploy models via managed endpoints for real-time usage in your applications.\n• Open Model Hosting: Host, manage, and version your proprietary or open-source models securely.\n\nWhether it's chatbots, sentiment analysis, or document intelligence, our Hugging Face integrations help you deploy AI with transparency and speed."
+},
+
+"redhat": {
+    mainContent: "Our collaboration with Red Hat enables enterprises to modernize infrastructure, automate operations, and orchestrate containerized workloads at scale. Whether it’s with OpenShift for hybrid cloud or Ansible for IT automation, Varenya brings operational agility to your DevSecOps pipeline.",
+    solutions: "We offer Red Hat-powered services in:\n\n• Hybrid Cloud Enablement: Deploy OpenShift to unify on-prem and cloud-native applications under a single control plane.\n• IT Automation with Ansible: Automate infrastructure provisioning, application deployment, and configuration management with repeatable playbooks.\n• CI/CD Pipelines: Build scalable DevSecOps pipelines integrated with OpenShift’s GitOps workflows.\n• Governance & Compliance: Maintain consistent security policies and configurations across environments using Ansible Automation Platform.\n\nOur certified Red Hat consultants ensure faster time-to-value while reducing operational risk in complex enterprise ecosystems."
+}
+
     };
 
 

@@ -18,6 +18,7 @@ import ContactSection from "@/components/ContactSection";
 import FeatrueSectionAnother from "@/components/FeatureSectionAnother";
 import VarenyaSplash from "@/components/VarenyaSplash";
 import NavigationBar from "@/components/NavigationBar";
+import TopHeader from "./TopHeader";
 
 export default function Home() {
   const contactRef = useRef<HTMLDivElement>(null);
@@ -35,6 +36,9 @@ export default function Home() {
 
 
       <Analytics />
+      <div className="hidden md:block">
+      <TopHeader/>
+      </div>
       <NavigationBar />
 
       
