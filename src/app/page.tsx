@@ -26,7 +26,14 @@ export default function Home() {
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
+  // home page video
+  // slide right
+  // contact us hame age
+  // easy apply
+  // font and font size 
+  // orange -> blue
+  // explore our technologies, hove stop
+  // testimonals 
   return (
     <div>
 <Head>

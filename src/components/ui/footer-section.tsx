@@ -220,18 +220,17 @@ function Footerdemo() {
                 </div>
 
                 
-                <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
-                    <div>
-                        <p className="text-sm text-muted-foreground">
-                            © {new Date().getFullYear()} Varenya Inc. All rights reserved.
-                        </p>
-                        <p className="mt-1 text-xs text-muted-foreground">
-                            All copyrights are owned by Varenya Inc. Unauthorized reproduction is prohibited.
-                        </p>
-                    </div>
-                    <nav className="flex gap-4 text-sm">
-                    </nav>
-                </div>
+                <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t pt-8 text-center">
+    <div>
+        <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Varenya Inc. All rights reserved.
+        </p>
+        <p className="mt-1 text-xs text-muted-foreground">
+            All copyrights are owned by Varenya Inc. Unauthorized reproduction is prohibited.
+        </p>
+    </div>
+</div>
+
             </div>
         </footer>
     );
