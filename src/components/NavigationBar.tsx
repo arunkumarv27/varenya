@@ -59,12 +59,20 @@ export default function NavigationBar() {
         >
           
           <li className="mega-menu-item">
-            <a className="mega-menu-link" href="/">Home</a>
-          </li>
+          <a
+  className="mega-menu-link font-bold text-[17px] text-[#0E1C3D] hover:text-[#007bff] transition-colors duration-200"
+  href="/"
+>
+  Home
+</a>          </li>
 
           <li className="mega-menu-item mega-menu-item-has-children">
 
-            <a className="mega-menu-link cursor-pointer">Services</a>
+            <a
+  className="mega-menu-link font-bold text-[17px] text-[#0E1C3D] hover:text-[#007bff] transition-colors duration-200 cursor-pointer"
+>
+Services
+</a>    
             <ul className="mega-sub-menu">
               <li className="mega-menu-item">
                 <h4 className="mega-block-title">Managed IT Services</h4>
@@ -197,7 +205,13 @@ export default function NavigationBar() {
           </li>
           
           <li className="mega-menu-item mega-menu-item-has-children">
-            <a className="mega-menu-link cursor-pointer">Industries</a>
+
+            <a
+  className="mega-menu-link font-bold text-[17px] text-[#0E1C3D] hover:text-[#007bff] transition-colors duration-200"
+  href="/"
+>
+Industries
+</a>    
             <ul className="mega-sub-menu">
               <li className="mega-menu-item">
                 <h4 className="mega-block-title">Automotive</h4>
@@ -241,7 +255,13 @@ export default function NavigationBar() {
           
           
           <li className="mega-menu-item mega-menu-item-has-children">
-            <a className="mega-menu-link cursor-pointer">Partnerships</a>
+
+            <a
+  className="mega-menu-link font-bold text-[17px] text-[#0E1C3D] hover:text-[#007bff] transition-colors duration-200"
+  href="/"
+>
+Partnerships
+</a>    
             <ul className="mega-sub-menu">
               <li className="mega-menu-item">
                 <h4 className="mega-block-title">Cloud Providers</h4>
@@ -320,17 +340,34 @@ export default function NavigationBar() {
 
           
           <li className="mega-menu-item">
-            <a className="mega-menu-link" href="/aboutUs/">Varenya At Work</a>
+
+            <a
+  className="mega-menu-link font-bold text-[17px] text-[#0E1C3D] hover:text-[#007bff] transition-colors duration-200"
+  href="/aboutUs"
+>
+Varenya At Work
+</a>  
           </li>
 
           
           <li className="mega-menu-item">
-            <a className="mega-menu-link" href="/careers/">Careers</a>
+
+            <a
+  className="mega-menu-link font-bold text-[17px] text-[#0E1C3D] hover:text-[#007bff] transition-colors duration-200"
+  href="/careers"
+>
+Careers
+</a>  
           </li>
 
           
           <li className="mega-menu-item">
-            <a className="mega-menu-link" href="/contactus/">Contact Us</a>
+
+            <a
+  className="mega-menu-link font-bold text-[17px] text-[#0E1C3D] hover:text-[#007bff] transition-colors duration-200"
+  href="/contactus"
+>
+Contact Us</a>  
           </li>
         </ul>
 

@@ -160,62 +160,23 @@ export default function NavContentPartnership({ slug }: { slug: string }) {
 
     return (
         <div style={containerStyles}>
-            
-            <section style={{ ...bannerStyles, position: "relative" as const, textAlign: "center" as const }} aria-label="Banner">
-                <div>
-                    <h1 style={{ marginBottom: "8px", textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)" }}>
-                        {getServiceName()}
-                    </h1>
-                    <p style={{ fontSize: "16px" }}>
-                        Comprehensive IT services tailored for your business success
-                    </p>
-                </div>
-            </section>
+        {/* Banner */}
+        <section style={bannerStyles} aria-label="Partnership Banner">
+            <div>
+                <h1 style={{ marginBottom: "8px", textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)" }}>
+                    {getServiceName()}
+                </h1>
+                <p style={{ fontSize: "16px" }}>
+                    Comprehensive IT solutions driven by strategic partnerships
+                </p>
+            </div>
+        </section>
 
-            
-            {/* <section style={sectionStyles} aria-label="Overview">
-                <h2 style={{ 
-                    borderBottom: "2px solid #007bff", 
-                    paddingBottom: "10px", 
-                    color: "#007bff",
-                    fontSize: "24px",
-                    fontWeight: "600"
-                }}>
-                    Overview
-                </h2>
-            </section> */}
+        {/* Main Content */}
+        <section style={contentStyles} aria-label="Solutions Section">
+            {tabContent[activeTab as keyof typeof tabContent]}
+        </section>
+    </div>
 
-            
-            {/* <nav style={tabsContainerStyles} aria-label="Content Navigation">
-                {[
-                    { key: "solutions", label: "Our Solutions" },
-                ].map((tab) => (
-                    <button
-                        key={tab.key}
-                        onClick={() => setActiveTab(tab.key)}
-                        style={getTabButtonStyles(activeTab === tab.key)}
-                        aria-selected={activeTab === tab.key}
-                        role="tab"
-                        onMouseOver={(e) => {
-                            if (activeTab !== tab.key) {
-                                e.target.style.backgroundColor = "rgba(0, 123, 255, 0.1)";
-                            }
-                        }}
-                        onMouseOut={(e) => {
-                            if (activeTab !== tab.key) {
-                                e.target.style.backgroundColor = "transparent";
-                            }
-                        }}
-                    >
-                        {tab.label}
-                    </button>
-                ))}
-            </nav> */}
-
-            
-            <section style={contentStyles} aria-label={`${activeTab} Content`}>
-                {tabContent[activeTab as keyof typeof tabContent]}
-            </section>
-        </div>
     );
 }
