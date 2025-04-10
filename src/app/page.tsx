@@ -47,7 +47,6 @@ export default function Home() {
       <TopHeader/>
       </div>
       <NavigationBar />
-
       
       <HomePage onContactClick={scrollToContact} />
       <OurClients />
