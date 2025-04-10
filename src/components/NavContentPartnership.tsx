@@ -69,7 +69,7 @@ export default function NavContentPartnership({ slug }: { slug: string }) {
 
     };
 
-
+    
     const cleanSlug = slug ? slug.replace(/\/$/, "").toLowerCase() : "";
 
     const currentContent = contentBySlug[cleanSlug as keyof typeof contentBySlug] || {
@@ -104,7 +104,7 @@ export default function NavContentPartnership({ slug }: { slug: string }) {
     };
 
 
-    const bannerStyles = {
+    const bannerStyles: React.CSSProperties = {
         backgroundImage: "url('/aboutus.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -120,7 +120,6 @@ export default function NavContentPartnership({ slug }: { slug: string }) {
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
         borderBottom: "3px solid #007bff"
     };
-
     const containerStyles = {
         fontFamily: "'Segoe UI', system-ui, sans-serif",
         backgroundColor: "#ffffff",
