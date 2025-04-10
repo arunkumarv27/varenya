@@ -1,7 +1,7 @@
 /* eslint-disable */
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Head from "next/head"; // Import Head for favicon
 import Analytics from "./Analytics";
 import HomePage from "@/components/HomePage";
@@ -22,10 +22,35 @@ import TopHeader from "./TopHeader";
 
 export default function Home() {
   const contactRef = useRef<HTMLDivElement>(null);
+  const [showTopHeader, setShowTopHeader] = useState(false);
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); // show shadow after scrolling
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+    // Detect scroll
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 100) {
+          setShowTopHeader(true);
+        } else {
+          setShowTopHeader(false);
+        }
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
   // home page video
   // slide right
   // contact us hame age
@@ -42,10 +67,14 @@ export default function Home() {
 </Head>
 
 
-      {/* <Analytics /> */}
-      <div className="fixed top-0 left-0 w-full z-50">
-      <TopHeader/>
-      </div>
+<div
+  className={`top-0 z-50 w-full sticky transition-all duration-300 ${
+    isScrolled ? "shadow-md bg-white" : "bg-transparent"
+  }`}
+>
+  <TopHeader />
+</div>
+
       <NavigationBar />
       <HomePage onContactClick={scrollToContact} />
       <OurClients />
