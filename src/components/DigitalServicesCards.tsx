@@ -53,9 +53,10 @@ export default function DigitalServicesCards() {
     const endWidth = desktopMedium ? 500 : 432
 
     return (
-        <div className="h-screen bg-orange-600 p-8 flex flex-col md:flex-row gap-8">
-            
-            <div className="min-h-80 bg-orange-600 p-8 flex gap-8">
+        <div style={{ backgroundColor: '#0285D3' }} className="h-screen p-8 flex flex-wrap justify-center gap-8">
+
+
+            <div style={{ backgroundColor: '#0285D3' }} className="min-h-80 p-8 flex gap-8">
                 {services.map((service, index) => {
                     const isSelected = index === activeCard
 
@@ -103,8 +104,10 @@ export default function DigitalServicesCards() {
                 })}
             </div>
 
-            
-            <div className="flex-1 p-6 bg-white rounded-lg shadow-lg overflow-y-auto">
+
+            {/* <div className="w-full md:w-1/3 flex-shrink-0 p-4 md:p-6 text-white overflow-y-auto max-h-screen">
+
+
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">About Varenya</h2>
                 <p className="text-gray-700">
                     At Varenya, we provide services such as Digital Transformation, Cloud Solutions, Cybersecurity, AI & Machine Learning, DevOps & Automation, Data Analytics & BI, and Enterprise Software Development. Our goal is to empower businesses with cutting-edge technology solutions that drive efficiency, scalability, security, and innovation.
@@ -127,7 +130,7 @@ export default function DigitalServicesCards() {
                 <p className="text-gray-700 mt-4">
                     Data is a valuable asset, and our Data Analytics & Business Intelligence (BI) services empower businesses to extract meaningful insights from their data.
                 </p>
-            </div>
+            </div> */}
         </div>
     )
 }

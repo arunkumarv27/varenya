@@ -12,9 +12,9 @@ export default function FullScreenBanner() {
     const router = useRouter();
 
     const handleContactClick = () => {
-      router.push("/contactus");
+        router.push("/contactus");
     };
-    
+
     useEffect(() => {
         if (inView) {
             setIsVisible(true);
@@ -30,14 +30,14 @@ export default function FullScreenBanner() {
                 className="max-w-3xl relative z-10"
             >
 
-                <p className="text-sm font-semibold tracking-wide uppercase text-orange-300">Why Choose Us</p>
-                <h1 className="text-4xl sm:text-6xl font-extrabold text-orange-500 mt-2">
+                <p className="text-sm font-semibold tracking-wide uppercase text-blue-900">Why Choose Us</p>
+                <h1 className="text-4xl sm:text-6xl font-extrabold text-blue-500 mt-2">
                     Industry Expertise
                 </h1>
-                <h2 className="text-3xl sm:text-5xl font-light text-orange-400 mt-2">
+                <h2 className="text-3xl sm:text-5xl font-light text-blue-400 mt-2">
                     Combined With Technical Excellence
                 </h2>
-                <p className="text-lg text-orange-300 mt-4">
+                <p className="text-lg text-blue-300 mt-4">
                     Our team brings decades of experience across multiple industries, delivering solutions that drive real business value.
                 </p>
             </motion.div>
@@ -47,9 +47,10 @@ export default function FullScreenBanner() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={!isVisible ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 1.5 }}
-                    className="bg-orange-900 p-6 rounded-lg shadow-lg"
+                    className=" p-6 rounded-lg shadow-lg"
+                    style={{ backgroundColor: '#0285D3' }}
                 >
-                    <h3 className="text-4xl font-bold text-orange-300">Our Approach</h3>
+                    <h3 className="text-4xl font-bold text-blue-900">Our Approach</h3>
                     <p className="text-lg mt-3 text-orange-100">We focus on delivering high-impact solutions with cutting-edge technology and deep industry insights.</p>
                 </motion.div>
 
@@ -57,9 +58,10 @@ export default function FullScreenBanner() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={!isVisible ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 1.5 }}
-                    className="bg-orange-900 p-6 rounded-lg shadow-lg"
+                    className="p-6 rounded-lg shadow-lg"
+                    style={{ backgroundColor: '#0285D3' }}
                 >
-                    <h3 className="text-4xl font-bold text-orange-300">What We Offer</h3>
+                    <h3 className="text-4xl font-bold text-blue-900">What We Offer</h3>
                     <p className="text-lg mt-3 text-orange-100">From AI-driven insights to personalized strategies, we empower businesses with innovative solutions tailored to their unique needs.</p>
                 </motion.div>
 
@@ -67,9 +69,10 @@ export default function FullScreenBanner() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={!isVisible ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 1.5 }}
-                    className="bg-orange-900 p-6 rounded-lg shadow-lg"
+                    className=" p-6 rounded-lg shadow-lg"
+                    style={{ backgroundColor: '#0285D3' }}
                 >
-                    <h3 className="text-4xl font-bold text-orange-300">Why Work With Us</h3>
+                    <h3 className="text-4xl font-bold text-blue-900">Why Work With Us</h3>
                     <p className="text-lg mt-3 text-orange-100">We partner with industry leaders to create impactful solutions and help businesses succeed in a competitive market.</p>
                 </motion.div>
 
@@ -77,22 +80,23 @@ export default function FullScreenBanner() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={!isVisible ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 1.5 }}
-                    className="bg-orange-900 p-6 rounded-lg shadow-lg"
+                    className=" p-6 rounded-lg shadow-lg"
+                    style={{ backgroundColor: '#0285D3' }}
                 >
-                    <h3 className="text-4xl font-bold text-orange-300">Contact Us</h3>
+                    <h3 className="text-4xl font-bold text-blue-900">Contact Us</h3>
                     <p className="text-lg mt-3 text-orange-100">Don't leave without reaching out! Let us help you take your business to the next level. Get in touch today.</p>
                 </motion.div>
             </div>
 
             <motion.button
-  initial={{ opacity: 0, y: 20 }}
-  animate={!isVisible ? { opacity: 1, y: 0 } : {}}
-  transition={{ duration: 1.2 }}
-  className="mt-6 px-6 py-3 bg-orange-500 text-black text-lg font-bold rounded-lg shadow-lg hover:bg-orange-600"
-  onClick={handleContactClick}
->
-  Contact Us
-</motion.button>
+                initial={{ opacity: 0, y: 20 }}
+                animate={!isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1.2 }}
+                className="mt-6 px-6 py-3 bg-orange-500 text-black text-lg font-bold rounded-lg shadow-lg hover:bg-orange-600"
+                onClick={handleContactClick}
+            >
+                Contact Us
+            </motion.button>
 
         </div>
     );
