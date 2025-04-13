@@ -12,36 +12,37 @@ interface HomePageProps {
 export default function HomePage({ onContactClick }: HomePageProps) {
   return (
     <>
-      <header className="hero-overlay">
-        <div className="video-container">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="https://cdn.prod.website-files.com/6137ced70371b3cf7b45167d/6144beedeba1971e7ed26787_OCT-Cell-Motion-1-poster-00001.jpg"
-          >
-            <source
-              src="https://cdn.prod.website-files.com/6137ced70371b3cf7b45167d/6144beedeba1971e7ed26787_OCT-Cell-Motion-1-transcode.mp4"
-              type="video/mp4"
-            />
-            <source
-              src="https://cdn.prod.website-files.com/6137ced70371b3cf7b45167d/6144beedeba1971e7ed26787_OCT-Cell-Motion-1-transcode.webm"
-              type="video/webm"
-            />
-          </video>
-        </div>
-        <div className="content">
-          <div className="home-hero-h2 h2">
-            <h1>Transform Your Business with Cutting-Edge IT Solutions</h1>
+      <div className="overflow-x-hidden">
+        <header className="hero-overlay">
+          <div className="video-container">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster="https://cdn.prod.website-files.com/6137ced70371b3cf7b45167d/6144beedeba1971e7ed26787_OCT-Cell-Motion-1-poster-00001.jpg"
+            >
+              <source
+                src="https://cdn.prod.website-files.com/6137ced70371b3cf7b45167d/6144beedeba1971e7ed26787_OCT-Cell-Motion-1-transcode.mp4"
+                type="video/mp4"
+              />
+              <source
+                src="https://cdn.prod.website-files.com/6137ced70371b3cf7b45167d/6144beedeba1971e7ed26787_OCT-Cell-Motion-1-transcode.webm"
+                type="video/webm"
+              />
+            </video>
           </div>
-          <span className="heading_caps-lg new-universe">
-            Varenya Inc provides expert IT consulting, AI-driven solutions, cloud transformations, and cybersecurity services to accelerate your business growth.
-          </span>
-        </div>
-      </header>
+          <div className="content">
+            <div className="home-hero-h2 h2">
+              <h1>Transform Your Business with Cutting-Edge IT Solutions</h1>
+            </div>
+            <span className="heading_caps-lg new-universe">
+              Varenya Inc provides expert IT consulting, AI-driven solutions, cloud transformations, and cybersecurity services to accelerate your business growth.
+            </span>
+          </div>
+        </header>
 
-      <style jsx>{`
+        <style jsx>{`
                 .hero-overlay {
                   position: relative;
                   height: 800px; /* Increased height from 500px to 700px */
@@ -86,6 +87,7 @@ export default function HomePage({ onContactClick }: HomePageProps) {
                   line-height: 51px;
                 }
             `}</style>
+      </div>
     </>
   );
 }
