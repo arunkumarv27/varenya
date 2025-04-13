@@ -3,9 +3,9 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Job } from "@/app/mockJobs"
-import ApplicationForm from "@/app/ApplicationForm"
 import Image from "next/image"
+import ApplicationForm from "./ApplicationForm"
+import { Job } from "./mockJobs"
 
 interface EasyApplyModalProps {
     job: Job
