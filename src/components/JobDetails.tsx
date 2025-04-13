@@ -11,7 +11,7 @@ interface JobDetailProps {
   onApply: () => void
 }
 
-export default function JobDetail({ job, onApply }: JobDetailProps) {
+export default function JobDetail({ job }: JobDetailProps) {
   const [showModal, setShowModal] = useState(false)
 
   return (
