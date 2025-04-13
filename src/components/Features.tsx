@@ -46,7 +46,7 @@ function Features() {
             <div className="max-w-6xl mx-auto">
                 <FeatureSteps
                     features={features}
-                    autoPlayInterval={2000}
+                    autoPlayInterval={5000}
                     imageHeight="h-[700px]"
                 />
             </div>

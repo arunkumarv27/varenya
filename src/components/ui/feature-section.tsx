@@ -1,4 +1,3 @@
-/* eslint-disable */
 "use client"
 
 import React, { useState, useEffect } from "react"
@@ -30,8 +29,11 @@ export function FeatureSteps({
 }: FeatureStepsProps) {
     const [currentFeature, setCurrentFeature] = useState(0)
     const [progress, setProgress] = useState(0)
+    const [isHovered, setIsHovered] = useState(false)
 
     useEffect(() => {
+        if (isHovered) return
+
         const timer = setInterval(() => {
             if (progress < 100) {
                 setProgress((prev) => prev + 100 / (autoPlayInterval / 100))
@@ -42,7 +44,7 @@ export function FeatureSteps({
         }, 100)
 
         return () => clearInterval(timer)
-    }, [progress, features.length, autoPlayInterval])
+    }, [progress, features.length, autoPlayInterval, isHovered])
 
     return (
         <div className={cn("p-8 md:p-12", className)}>
@@ -56,17 +58,22 @@ export function FeatureSteps({
                         {features.map((feature, index) => (
                             <motion.div
                                 key={index}
-                                className="flex items-center gap-6 md:gap-8"
+                                className="flex items-center gap-6 md:gap-8 cursor-pointer"
+                                onMouseEnter={() => {
+                                    setCurrentFeature(index)
+                                    setIsHovered(true)
+                                }}
+                                onMouseLeave={() => setIsHovered(false)}
                                 initial={{ opacity: 0.3 }}
                                 animate={{ opacity: index === currentFeature ? 1 : 0.3 }}
-                                transition={{ duration: 0.5 }}
+                                transition={{ duration: 0.6 }}
                             >
                                 <motion.div
                                     className={cn(
                                         "w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border-2",
                                         index === currentFeature
                                             ? "bg-primary border-primary text-primary-foreground scale-110"
-                                            : "bg-muted border-muted-foreground",
+                                            : "bg-muted border-muted-foreground"
                                     )}
                                 >
                                     {index <= currentFeature ? (
@@ -90,7 +97,9 @@ export function FeatureSteps({
 
                     <div
                         className={cn(
-                            "order-1 md:order-2 relative h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-lg"
+                            "order-1 md:order-2 relative",
+                            imageHeight,
+                            "overflow-hidden rounded-lg"
                         )}
                     >
                         <AnimatePresence mode="wait">
@@ -100,21 +109,21 @@ export function FeatureSteps({
                                         <motion.div
                                             key={index}
                                             className="absolute inset-0 rounded-lg overflow-hidden"
-                                            initial={{ y: 100, opacity: 0, rotateX: -20 }}
+                                            initial={{ y: 100, opacity: 0, rotateX: -10 }}
                                             animate={{ y: 0, opacity: 1, rotateX: 0 }}
-                                            exit={{ y: -100, opacity: 0, rotateX: 20 }}
-                                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                                            exit={{ y: -100, opacity: 0, rotateX: 10 }}
+                                            transition={{ duration: 0.8, ease: "easeInOut" }}
                                         >
                                             <Image
                                                 src={feature.image}
                                                 alt={feature.step}
-                                                className="w-full h-full object-cover transition-transform transform"
+                                                className="w-full h-full object-cover"
                                                 width={1000}
                                                 height={500}
                                             />
                                             <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-background via-background/50 to-transparent" />
                                         </motion.div>
-                                    ),
+                                    )
                             )}
                         </AnimatePresence>
                     </div>
