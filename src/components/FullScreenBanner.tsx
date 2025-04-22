@@ -22,8 +22,8 @@ export default function FullScreenBanner() {
     }, [inView]);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-black text-orange-500 px-6 text-center">
-            <motion.div
+<div className="flex flex-col items-center justify-center min-h-screen bg-black text-orange-500 px-6 py-20 text-center">
+<motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={!isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 1 }}
