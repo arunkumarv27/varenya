@@ -30,6 +30,7 @@ export default function FullScreenBanner() {
                 className="max-w-3xl relative z-10"
             >
 
+                <p className="text-sm font-semibold tracking-wide uppercase text-blue-900">Why Choose Us</p>
                 <h1 className="text-4xl sm:text-6xl font-extrabold text-blue-500 mt-2">
                     Industry Expertise
                 </h1>
